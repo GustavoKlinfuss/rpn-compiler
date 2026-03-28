@@ -6,7 +6,7 @@
 
 **Disciplina**: Construção de Interpretadores
 
-**Professor:** Frank Coelho de Alcantara 
+**Professor:** Frank Coelho de Alcantara
 
 **Integrantes:**
 - Gustavo Klinfuss da Silva - **Github:** GustavoKlinfuss
@@ -19,6 +19,10 @@
 ```
 python main.py samples/teste1.txt
 ```
+
+**Arquivos gerados:**
+- `output/tokens_last.txt`
+- `output/program.s`
 
 **Como todar todos os testes:**
 ```

@@ -1,5 +1,7 @@
-from token_types import Token, TokenType
-
+"""
+Integrantes do grupo: Gustavo Klinfuss da Silva
+Nome do grupo no Canvas: RA1 31
+"""
 
 class LexicalError(Exception):
     pass

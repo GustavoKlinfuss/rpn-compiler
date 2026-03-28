@@ -35,12 +35,12 @@ def main() -> int:
         return 1
 
     os.makedirs("output", exist_ok=True)
-
-    salvarTokens(tokens)
+    caminho_tokens = os.path.join("output", "tokens_last.json")
+    salvarTokens(tokens, caminho_tokens)
 
     caminho_assembly = os.path.join("output", "program.s")
-    #gerarAssembly(trees, caminho_assembly)
-    #exibirResultados(tokens, caminho_assembly, caminho_tokens)
+    gerarAssembly(tokens, caminho_assembly)
+    exibirResultados(tokens, caminho_assembly, caminho_tokens)
 
     return 0
 
@@ -48,16 +48,9 @@ def lerArquivo(nome_arquivo: str) -> list[str]:
     with open(nome_arquivo, "r", encoding="utf-8") as f:
         return [linha.rstrip("\n") for linha in f]
 
-def salvarTokens(dados: list[str]) -> None:
-    caminho = os.path.join("output", "tokens_last.json")
-    with open(caminho, "w", encoding="utf-8") as f:
+def salvarTokens(dados: list[str], caminho_tokens: str) -> None:
+    with open(caminho_tokens, "w", encoding="utf-8") as f:
         json.dump(dados, f, indent=2, ensure_ascii=False)
-
-def salvarAst(dados: dict) -> None:
-    caminho = os.path.join("output", "ast_last.json")
-    with open(caminho, "w", encoding="utf-8") as f:
-        json.dump(dados, f, indent=2, ensure_ascii=False)
-
 
 def exibirResultados(tokens: list[Token], assembly_path: str, tokens_path: str) -> None:
     print("Análise léxica concluída com sucesso.")

@@ -13,16 +13,20 @@
 
 ## Execução
 **Requisitos**:
-- Python 3.11+
+- Python 3.14
+- Linha de comando configurada com python
 
 **Como executar:**
+Entrar na pasta raiz do projeto e executar:
 ```
 python main.py samples/teste1.txt
+python main.py samples/teste2.txt
+python main.py samples/teste3.txt
 ```
 
 **Arquivos gerados:**
-- `output/tokens_last.txt`
-- `output/program.s`
+- `output/tokens_last.txt` (Arquivo com tokens)
+- `output/program.s` (arquivo Assembly)
 
 **Como todar todos os testes:**
 ```
